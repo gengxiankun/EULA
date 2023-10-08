@@ -1,4 +1,4 @@
-package com.eula.component.service;
+package com.eula.component.curd.service;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
@@ -11,8 +11,8 @@ import com.eula.component.dto.IDto;
 import com.eula.component.dto.req.PageRequest;
 
 /**
- * Service 抽象类，通常在分层架构中存在频繁的类型转换操作（不能循环依赖），继承此类并实现 `component-dto` 中的 `IDto` 接口能够自动进行类型转换。
- * 此类还继承了 `Mybatis-Plus` 中的 `ServiceImpl` 接口，实现了通用的 CURD 操作。
+ * BaseService，通常在分层架构中存在频繁的类型转换操作（不能循环依赖），继承此类并实现 `component-dto` 中的 `IDto` 接口能够自动进行类型转换。
+ * 此类还继承了 `Mybatis-Plus` 中的 `ServiceImpl` 接口，实现了通用的 CURD 功能。
  * @param <M> BaseMapper
  * @param <T> Entity
  * @param <SearchReq> 查询请求实体
@@ -21,9 +21,9 @@ import com.eula.component.dto.req.PageRequest;
  * @param <Resp> 响应实体
  * @author gengxiankun
  */
-public abstract class AbstractService<M extends BaseMapper<T>, T, SearchReq extends PageRequest, SaveReq extends IDto, UpdateReq extends IDto, Resp extends IDto> extends ServiceImpl<M, T> {
+public abstract class BaseService<M extends BaseMapper<T>, T, SearchReq extends PageRequest, SaveReq extends IDto, UpdateReq extends IDto, Resp extends IDto> extends ServiceImpl<M, T> {
 
-    protected final Class<?>[] typeArguments = GenericTypeUtils.resolveTypeArguments(this.getClass(), AbstractService.class);
+    protected final Class<?>[] typeArguments = GenericTypeUtils.resolveTypeArguments(this.getClass(), BaseService.class);
 
     protected Class<Resp> respClass = this.getRespClass();
 

@@ -3,8 +3,6 @@
 #set( $symbol_escape = '\' )
 server:
   port: ${serverPort}
-  servlet:
-    context-path: /${rootArtifactId}
 
 spring:
   application:

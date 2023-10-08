@@ -72,13 +72,14 @@
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
           <directory>src/main/java</directory>
           <includes>
-            <include>**/.gitkeep</include>
+            <include>**/*.java</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
           <directory>src/main/resources</directory>
           <includes>
             <include>**/*.sql</include>
+            <include>**/.gitkeep</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
