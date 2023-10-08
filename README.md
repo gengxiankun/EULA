@@ -34,12 +34,13 @@ EULA 是 Easy Use and Layered Architecture 的缩写，代表 “易用的分层
 | flyway       | 数据迁移工具                          |
 
 ## EULA 组件
-| 组件名称             | 功能                                | 依赖                        |
-|------------------|-----------------------------------|---------------------------|
-| component-dto    | 定义了 DTO 接口类以及分页请求体                | 无                         |
-| component-curd   | 实现数据转换以及通用 CURD 功能和 Restful 风格的接口 | mybatis-plus、compoent-dto |
-| component-result | 实现了无侵入式数据格式统一以及错误码管理              | mybatis-plus              |
-| component-openai | 实现了 api2d（openai 国内代理）的 SDK       | 无                         |
+| 组件名称                | 功能                                | 依赖                         |
+|---------------------|-----------------------------------|----------------------------|
+| component-dto       | 定义了 DTO 接口类以及分页请求体                | 无                          |
+| component-curd      | 实现数据转换以及通用 CURD 功能和 Restful 风格的接口 | mybatis-plus、component-dto |
+| component-result    | 实现了无侵入式数据格式统一以及错误码管理              | mybatis-plus               |
+| component-openai    | 实现了 api2d（openai 国内代理）的 SDK       | 无                          |
+| component-security  | 信息安全组件                            | 无                          |
 
 
 ## 如何使用 EULA
