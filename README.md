@@ -45,9 +45,11 @@ EULA 是 Easy Use and Layered Architecture 的缩写，代表 “易用的分层
 
 ## 如何使用 EULA
 **1. 安装 eula archetype**
+
 下载 `archetypes` 下的源码到本地，然后本地运行 `mvn install` 进行安装。
 
 **2. 安装 eula components**
+
 下载 `components` 下的源码到本地，然后本地运行 `mvn install` 进行安装。
 
 **3. 创建应用**
