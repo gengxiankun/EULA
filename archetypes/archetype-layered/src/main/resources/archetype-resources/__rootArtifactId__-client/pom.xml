@@ -26,13 +26,13 @@
 
 		<!-- result -->
 		<dependency>
-			<groupId>com.eula.compoent</groupId>
+			<groupId>com.eula.component</groupId>
 			<artifactId>component-result</artifactId>
 		</dependency>
 
-		<!-- compoent-dto -->
+		<!-- component-dto -->
 		<dependency>
-			<groupId>com.eula.compoent</groupId>
+			<groupId>com.eula.component</groupId>
 			<artifactId>component-dto</artifactId>
 		</dependency>
 	</dependencies>

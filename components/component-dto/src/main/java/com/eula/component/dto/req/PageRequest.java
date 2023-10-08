@@ -1,4 +1,4 @@
-package com.eula.compoent.dto.req;
+package com.eula.component.dto.req;
 
 import lombok.Data;
 

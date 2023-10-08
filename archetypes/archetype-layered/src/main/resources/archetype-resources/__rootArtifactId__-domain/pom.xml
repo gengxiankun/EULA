@@ -18,6 +18,12 @@
 	</properties>
 
 	<dependencies>
+		<!-- infrastructure -->
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-infrastructure</artifactId>
+		</dependency>
+
 		<!-- spring-boot-starter -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

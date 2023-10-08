@@ -18,9 +18,9 @@
 		<spring-boot.version>2.7.15</spring-boot.version>
 		<javax.el-api.version>3.0.0</javax.el-api.version>
 
-		<compoent-result.version>1.0.0-SNAPSHOT</compoent-result.version>
-		<compoent-dto.version>1.0.0-SNAPSHOT</compoent-dto.version>
-		<compoent-service.version>1.0.0-SNAPSHOT</compoent-service.version>
+		<component-result.version>1.0.0-SNAPSHOT</component-result.version>
+		<component-dto.version>1.0.0-SNAPSHOT</component-dto.version>
+		<component-service.version>1.0.0-SNAPSHOT</component-service.version>
 		<mybatis-plus-boot-starter.version>3.5.3.2</mybatis-plus-boot-starter.version>
 		<flyway.version>5.2.1</flyway.version>
 		<hutool-all.version>5.8.22</hutool-all.version>
@@ -134,25 +134,25 @@
 				<version>${flyway.version}</version>
 			</dependency>
 
-			<!-- compoent-result -->
+			<!-- component-result -->
 			<dependency>
-				<groupId>com.eula.compoent</groupId>
+				<groupId>com.eula.component</groupId>
 				<artifactId>component-result</artifactId>
-				<version>${compoent-result.version}</version>
+				<version>${component-result.version}</version>
 			</dependency>
 
-			<!-- compoent-dto -->
+			<!-- component-dto -->
 			<dependency>
-				<groupId>com.eula.compoent</groupId>
+				<groupId>com.eula.component</groupId>
 				<artifactId>component-dto</artifactId>
-				<version>${compoent-dto.version}</version>
+				<version>${component-dto.version}</version>
 			</dependency>
 
-			<!-- compoent-service -->
+			<!-- component-service -->
 			<dependency>
-				<groupId>com.eula.compoent</groupId>
+				<groupId>com.eula.component</groupId>
 				<artifactId>component-service</artifactId>
-				<version>${compoent-service.version}</version>
+				<version>${component-service.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

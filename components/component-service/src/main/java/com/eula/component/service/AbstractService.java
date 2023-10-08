@@ -1,4 +1,4 @@
-package com.eula.compoent.service;
+package com.eula.component.service;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
@@ -7,8 +7,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.reflect.GenericTypeUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.eula.compoent.dto.IDto;
-import com.eula.compoent.dto.req.PageRequest;
+import com.eula.component.dto.IDto;
+import com.eula.component.dto.req.PageRequest;
 
 /**
  * Service 抽象类，通常在分层架构中存在频繁的类型转换操作（不能循环依赖），继承此类并实现 `component-dto` 中的 `IDto` 接口能够自动进行类型转换。

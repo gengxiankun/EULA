@@ -1,4 +1,4 @@
-package com.eula.compoent.dto;
+package com.eula.component.dto;
 
 import java.io.Serializable;
 

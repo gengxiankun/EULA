@@ -18,15 +18,9 @@
 	</properties>
 
 	<dependencies>
-		<!-- domain -->
-		<dependency>
-			<groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-domain</artifactId>
-		</dependency>
-
 		<!-- result -->
 		<dependency>
-			<groupId>com.eula.compoent</groupId>
+			<groupId>com.eula.component</groupId>
 			<artifactId>component-result</artifactId>
 		</dependency>
 	</dependencies>

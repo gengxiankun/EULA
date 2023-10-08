@@ -38,7 +38,7 @@
 
 		<!-- component-service -->
 		<dependency>
-			<groupId>com.eula.compoent</groupId>
+			<groupId>com.eula.component</groupId>
 			<artifactId>component-service</artifactId>
 		</dependency>
 	</dependencies>
