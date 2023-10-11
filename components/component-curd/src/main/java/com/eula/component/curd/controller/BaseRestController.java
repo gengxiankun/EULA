@@ -7,6 +7,8 @@ import com.eula.component.dto.req.PageRequest;
 import com.eula.component.curd.service.BaseService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * BaseRestController，按照 Restful 风格实现了通过的 CURD 接口。
  * @author gengxiankun
@@ -27,13 +29,23 @@ public abstract class BaseRestController<S extends BaseService<M , T, SearchReq,
     }
 
     /**
-     * 获取列表
+     * 获取分页数据
+     * @param req 查询参数
+     * @return 分页数据
+     */
+    @GetMapping
+    public IPage<Resp> page(SearchReq req) {
+        return this.baseService.page(req);
+    }
+
+    /**
+     * 获取列表数据
      * @param req 查询参数
      * @return 列表数据
      */
-    @GetMapping
-    public IPage<Resp> search(SearchReq req) {
-        return this.baseService.search(req);
+    @GetMapping(params = "disablePage=true")
+    public List<Resp> list(SearchReq req) {
+        return this.baseService.list(req);
     }
 
     /**

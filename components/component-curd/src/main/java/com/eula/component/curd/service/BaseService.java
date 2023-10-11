@@ -10,6 +10,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.eula.component.dto.IDto;
 import com.eula.component.dto.req.PageRequest;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * BaseService，通常在分层架构中存在频繁的类型转换操作（不能循环依赖），继承此类并实现 `component-dto` 中的 `IDto` 接口能够自动进行类型转换。
  * 此类还继承了 `Mybatis-Plus` 中的 `ServiceImpl` 接口，实现了通用的 CURD 功能。
@@ -27,11 +30,17 @@ public abstract class BaseService<M extends BaseMapper<T>, T, SearchReq extends 
 
     protected Class<Resp> respClass = this.getRespClass();
 
-    public IPage<Resp> search(SearchReq req) {
+    public IPage<Resp> page(SearchReq req) {
         Wrapper<T> wrapper = this.getWrapper(req);
         Page<T> page = new Page<>(req.getPage(), req.getPerPage());
         Page<T> result = this.page(page, wrapper);
         return result.convert(this::getResp);
+    }
+
+    public List<Resp> list(SearchReq req) {
+        Wrapper<T> wrapper = this.getWrapper(req);
+        List<T> result = this.list(wrapper);
+        return result.stream().map(this::getResp).collect(Collectors.toList());
     }
 
     public Resp findById(Long id) {
@@ -39,8 +48,10 @@ public abstract class BaseService<M extends BaseMapper<T>, T, SearchReq extends 
         return this.getResp(entity);
     }
     
-    public void save(SaveReq req) {
-        this.save(this.convertBySaveReq(req));
+    public T save(SaveReq req) {
+        T entity = this.convertBySaveReq(req);
+        this.save(entity);
+        return entity;
     }
     
     public void update(UpdateReq req) {
