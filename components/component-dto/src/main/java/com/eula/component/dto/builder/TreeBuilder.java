@@ -17,6 +17,8 @@ public class TreeBuilder<T extends ITreeNode> {
 
     private Boolean enableParentName;
 
+    private Boolean enableLevel;
+
     /**
      * 追加节点集合
      */
@@ -46,6 +48,14 @@ public class TreeBuilder<T extends ITreeNode> {
      */
     public TreeBuilder<T> enableParentName() {
         this.enableParentName = true;
+        return this;
+    }
+
+    /**
+     * 启用层级标注
+     */
+    public TreeBuilder<T> enableLevel() {
+        this.enableLevel = true;
         return this;
     }
 
@@ -93,6 +103,9 @@ public class TreeBuilder<T extends ITreeNode> {
             if (node.getParentId().equals(parentNode.getId())) {
                 if (Boolean.TRUE.equals(this.enableParentName)) {
                     node.setParentName(parentNode.getName());
+                }
+                if (Boolean.TRUE.equals(this.enableLevel)) {
+                    node.setLevel(parentNode.getLevel() + 1);
                 }
                 childNodeList.add(this.buildChildTree(node));
             }

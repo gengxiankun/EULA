@@ -15,6 +15,16 @@ public interface ITreeNode extends IDto {
     Long getId();
 
     /**
+     * 设置层级
+     */
+    void setLevel(Integer level);
+
+    /**
+     * 获取层级
+     */
+    Integer getLevel();
+
+    /**
      * 获取父类 ID
      * @return 父类 ID
      */

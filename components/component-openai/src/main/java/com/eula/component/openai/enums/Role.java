@@ -7,11 +7,15 @@ public enum Role {
     USER, ASSISTANT, SYSTEM;
 
     public String toValue() {
-        return switch (this) {
-            case USER -> "user";
-            case ASSISTANT -> "assistant";
-            case SYSTEM -> "system";
+        switch (this) {
+            case USER:
+                return "user";
+            case ASSISTANT:
+                return "assistant";
+            case SYSTEM:
+                return "system";
         };
+        return null;
     }
 
     public static Role forValue(String value) throws IOException {
