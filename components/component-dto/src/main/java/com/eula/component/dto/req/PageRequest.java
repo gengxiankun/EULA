@@ -1,5 +1,6 @@
 package com.eula.component.dto.req;
 
+import com.eula.component.dto.IDto;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -9,7 +10,7 @@ import java.io.Serializable;
  * @author xiankun.geng
  */
 @Data
-public class PageRequest implements Serializable {
+public class PageRequest implements Serializable, IDto {
 
     private static final long SerialVersionUID = 1L;
 
