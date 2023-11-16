@@ -106,6 +106,8 @@ public class DesensitizedService {
                 return DesensitizedUtil.chineseName(value);
             case ADDRESS:
                 return DesensitizedUtil.address(value, 6);
+            case KEY:
+                return DesensitizedUtil.idCardNum(value, 3, 0);
             default:
                 return value;
         }

@@ -67,7 +67,7 @@ public abstract class BaseService<M extends BaseMapper<T>, T, SearchReq extends 
         return (Class<Resp>) this.typeArguments[5];
     }
 
-    protected Resp getResp(T entity) {
+    public Resp getResp(T entity) {
         return BeanUtil.copyProperties(entity, this.respClass);
     }
 

@@ -25,10 +25,10 @@ import java.util.Arrays;
 @Aspect
 public class SecurityAspect {
 
-    @Value("${plugin.security.key}")
+    @Value("${component.security.key}")
     private String key;
 
-    @Value("${plugin.security.rsa-private-key}")
+    @Value("${component.security.rsa-private-key}")
     private String rasPrivateKey;
 
     @Resource

@@ -17,4 +17,6 @@ public enum FieldType {
 
     ADDRESS,
 
+    KEY,
+
 }

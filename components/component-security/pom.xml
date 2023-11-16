@@ -45,6 +45,14 @@
 			<version>${spring-boot.version}</version>
 		</dependency>
 
+		<!-- configuration processor -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<version>${spring-boot.version}</version>
+			<optional>true</optional>
+		</dependency>
+
 		<!-- spring data commons -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>

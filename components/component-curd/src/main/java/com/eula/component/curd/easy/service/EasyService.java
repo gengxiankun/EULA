@@ -61,10 +61,10 @@ public abstract class EasyService<M extends BaseMapper<T>, T, Req extends IDto, 
 
     @SuppressWarnings("unchecked")
     protected Class<Resp> getRespClass() {
-        return (Class<Resp>) this.typeArguments[5];
+        return (Class<Resp>) this.typeArguments[3];
     }
 
-    protected Resp getResp(T entity) {
+    public Resp getResp(T entity) {
         return BeanUtil.copyProperties(entity, this.respClass);
     }
 
